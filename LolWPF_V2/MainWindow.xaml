@@ -1,0 +1,27 @@
+﻿
+<Window x:Class="LolWPF_V2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LolWPF_V2"
+        mc:Ignorable="d"
+        Title="LOL Hősök" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="txtKereses" TextWrapping="Wrap" Width="100" Height="20"/>
+            <Button x:Name="btnKereses" Content="Keresés" Height="20" Click="btnKereses_Click"/>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Width="200"/>
+            <Button x:Name="btnMentes" Content="Mentés" Height="20" Click="btnMentes_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="dtgAdatok" Grid.Row="1" ColumnWidth="*" SelectionChanged="dtgAdatok_SelectionChanged">
+
+        </DataGrid>
+
+    </Grid>
+</Window>
